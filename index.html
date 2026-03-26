@@ -3,52 +3,125 @@
 <head>
     <title>Meezan | AI Engineer</title>
 
-   .box:hover {
-    box-shadow: 0 0 10px #00ff9f;
-}
-    .box:hover {
-    box-shadow: 0 0 10px #00ff9f;
-}
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #00ff9f;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .box {
+            background: #161b22;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px #00ff9f;
+        }
+
+        a {
+            color: #00ff9f;
+            text-decoration: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #00ff9f;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #00ff9f;
+            color: black;
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>About Me</h1>
-<p id="typing"></p>
-    <p>
-I am an AI/ML Engineering student with experience in building intelligent systems 
-using Machine Learning, Computer Vision, and Full Stack Development. 
-I focus on developing scalable and real-world data-driven solutions.
-</p>
-
-<script>
-    let text = "Meezan - AI/ML Engineer & Full Stack Developer";
-    let i = 0;
-
-    function typeEffect() {
-        if (i < text.length) {
-            document.getElementById("typing").innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeEffect, 50);
-        }
-    }
-
-    typeEffect();
-</script>
-
-    <h1>Skills</h1>
-    <p>Python | Machine Learning | React | NLP | SQL</p>
-
-    <div class="box">
-        <h2>Smart Yoga AI – Pose Detection System</h2>
-       <p>Developed a computer vision-based system achieving 95% accuracy in real-time pose detection.</p>
+    <!-- HERO -->
+    <div class="section">
+        <h1>Meezan</h1>
+        <p>AI/ML Engineer | Full Stack Developer</p>
+        <a class="btn" href="#">Download Resume</a>
     </div>
 
-    <div class="box">
-        <h2>Fake News Detection – NLP Classifier</h2>
-       <p>Built an NLP-based machine learning model achieving 93% accuracy in news classification.</p>
+    <!-- ABOUT -->
+    <div class="section">
+        <h1>About Me</h1>
+        <p>
+        I am an AI/ML Engineering student specializing in building intelligent systems 
+        using Machine Learning, Computer Vision, and Web Technologies. 
+        I focus on developing scalable and real-world data-driven solutions.
+        </p>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+        <h1>Projects</h1>
+
+        <div class="box">
+            <h2>Smart Yoga AI – Pose Detection System</h2>
+            <p><b>Problem:</b> Users perform yoga incorrectly without guidance.</p>
+            <p><b>Solution:</b> Built a computer vision system using MediaPipe.</p>
+            <p><b>Tech:</b> Python, OpenCV, Scikit-learn</p>
+            <p><b>Result:</b> Achieved 95% accuracy in pose detection.</p>
+            <a href="#" target="_blank">View Project →</a>
+        </div>
+
+        <div class="box">
+            <h2>Fake News Detection – NLP Classifier</h2>
+            <p><b>Problem:</b> Spread of misinformation in digital platforms.</p>
+            <p><b>Solution:</b> Developed NLP-based classification model.</p>
+            <p><b>Tech:</b> Python, TF-IDF, Scikit-learn</p>
+            <p><b>Result:</b> Achieved 93% accuracy.</p>
+            <a href="#" target="_blank">View Project →</a>
+        </div>
+
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+        <h1>Skills</h1>
+        <p>Python | Machine Learning | NLP | React | SQL | JavaScript</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section">
+        <h1>Contact</h1>
+        <p>Email: meezan1mulla@gmail.com</p>
+        <p>
+            <a href="#" target="_blank">LinkedIn</a> |
+            <a href="#" target="_blank">GitHub</a>
+        </p>
     </div>
 
 </div>
