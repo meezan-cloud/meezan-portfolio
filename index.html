@@ -10,7 +10,6 @@
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
             color: #e5e7eb;
-            overflow-x: hidden;
             background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #020617);
             background-size: 400% 400%;
             animation: gradientBG 12s ease infinite;
@@ -37,12 +36,12 @@
             color: #a78bfa;
         }
 
-        .section {
-            margin-bottom: 100px;
-        }
-
         p {
             line-height: 1.7;
+        }
+
+        .section {
+            margin-bottom: 100px;
         }
 
         .btn {
@@ -96,24 +95,6 @@
         a:hover {
             color: #7c3aed;
         }
-
-        /* TYPEWRITER */
-        .typing {
-            border-right: 2px solid #a78bfa;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
     </style>
 </head>
 
@@ -123,10 +104,8 @@
 
     <!-- HERO -->
     <div class="section">
-        <h1 class="typing">Meezan Mulla</h1>
-        <p class="typing" style="animation-delay:3s;">
-            AI/ML Engineer building intelligent and scalable systems
-        </p>
+        <h1 id="name"></h1>
+        <p id="tagline"></p>
         <a class="btn" href="Resume.pdf" target="_blank">Download Resume</a>
     </div>
 
@@ -202,6 +181,35 @@
     </div>
 
 </div>
+
+<!-- TYPEWRITER SCRIPT -->
+<script>
+const nameText = "Meezan Mulla";
+const taglineText = "AI/ML Engineer building intelligent and scalable systems";
+
+let i = 0;
+let j = 0;
+
+function typeName() {
+    if (i < nameText.length) {
+        document.getElementById("name").innerHTML += nameText.charAt(i);
+        i++;
+        setTimeout(typeName, 80);
+    } else {
+        setTimeout(typeTagline, 300);
+    }
+}
+
+function typeTagline() {
+    if (j < taglineText.length) {
+        document.getElementById("tagline").innerHTML += taglineText.charAt(j);
+        j++;
+        setTimeout(typeTagline, 40);
+    }
+}
+
+typeName();
+</script>
 
 </body>
 </html>
