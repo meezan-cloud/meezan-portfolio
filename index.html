@@ -3,10 +3,7 @@
 <head>
     <title>Meezan | AI Engineer</title>
 
-    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- PARTICLES -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
     <style>
@@ -15,15 +12,36 @@
             font-family: 'Segoe UI', sans-serif;
             color: #e5e7eb;
             background-color: #020617;
+            cursor: none;
         }
 
+        /* PARTICLES */
         #particles-js {
             position: fixed;
             width: 100%;
             height: 100%;
             z-index: -1;
-            top: 0;
-            left: 0;
+        }
+
+        /* CUSTOM CURSOR */
+        .cursor-dot {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: #a78bfa;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .cursor-glow {
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            background: rgba(167,139,250,0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 998;
         }
 
         .container {
@@ -41,57 +59,37 @@
             color: #a78bfa;
         }
 
-        p {
-            line-height: 1.7;
-        }
-
         .section {
             margin-bottom: 100px;
-        }
-
-        /* FADE */
-        .fade {
             opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease forwards;
+            transform: translateY(40px);
+            transition: 1s;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 22px;
-            border: 1px solid #7c3aed;
-            border-radius: 8px;
-            margin-top: 15px;
+        /* GLASS CARDS */
+        .card {
+            background: rgba(15,23,42,0.6);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(167,139,250,0.2);
+            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #7c3aed;
-            color: white;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(167,139,250,0.3);
         }
 
         .projects {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
-        }
-
-        .card {
-            background: #0f172a;
-            padding: 25px;
-            border-radius: 14px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(124,58,237,0.3);
         }
 
         .skills {
@@ -101,9 +99,21 @@
         }
 
         .skill {
-            background: #0f172a;
+            background: rgba(15,23,42,0.6);
             padding: 10px 15px;
             border-radius: 8px;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border: 1px solid #7c3aed;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #7c3aed;
         }
 
         a {
@@ -111,16 +121,10 @@
             text-decoration: none;
         }
 
-        a:hover {
-            color: #7c3aed;
-        }
-
-        /* CURSOR */
         .cursor {
             display: inline-block;
             width: 2px;
             background: #a78bfa;
-            margin-left: 5px;
             animation: blink 1s infinite;
         }
 
@@ -128,7 +132,6 @@
             50% { opacity: 0; }
         }
 
-        /* HIGHLIGHT */
         .highlight {
             color: #c084fc;
         }
@@ -137,91 +140,57 @@
 
 <body>
 
-<!-- BACKGROUND -->
 <div id="particles-js"></div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-glow"></div>
 
 <div class="container">
 
-    <!-- HERO -->
-    <div class="section fade">
+    <div class="section">
         <h1 id="name"></h1>
         <p id="tagline"></p>
         <a class="btn" href="Resume.pdf" target="_blank">Download Resume</a>
     </div>
 
-    <!-- ABOUT -->
-    <div class="section fade">
+    <div class="section">
         <h2>About</h2>
-        <p>
-        Final-year AI/ML Engineering student with experience in building real-world machine learning models 
-        and full-stack applications. Strong focus on problem-solving, data-driven systems, and scalable solutions.
-        </p>
+        <p>AI/ML Engineering student building real-world intelligent systems using machine learning and full-stack technologies.</p>
     </div>
 
-    <!-- PROJECTS -->
-    <div class="section fade">
+    <div class="section">
         <h2>Projects</h2>
-
         <div class="projects">
-
             <div class="card">
                 <h3>Smart Yoga AI</h3>
-                <p>Computer vision-based system for real-time yoga pose detection with 95% accuracy.</p>
-                <a href="https://github.com/meezan-cloud" target="_blank">View Project →</a>
+                <p>95% accurate computer vision pose detection system.</p>
             </div>
-
             <div class="card">
                 <h3>Fake News Detection</h3>
-                <p>NLP-based machine learning model achieving 93% accuracy in classification.</p>
-                <a href="https://github.com/meezan-cloud" target="_blank">View Project →</a>
+                <p>93% accurate NLP classification model.</p>
             </div>
-
         </div>
     </div>
 
-    <!-- SKILLS -->
-    <div class="section fade">
+    <div class="section">
         <h2>Skills</h2>
-
         <div class="skills">
             <div class="skill">Python</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Java</div>
-            <div class="skill">C</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Machine Learning</div>
+            <div class="skill">ML</div>
             <div class="skill">NLP</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">NumPy</div>
-            <div class="skill">Scikit-learn</div>
             <div class="skill">React</div>
-            <div class="skill">Node.js</div>
-            <div class="skill">MongoDB</div>
-            <div class="skill">Git</div>
-            <div class="skill">Power BI</div>
+            <div class="skill">SQL</div>
         </div>
     </div>
 
-    <!-- CONTACT -->
-    <div class="section fade">
+    <div class="section">
         <h2>Contact</h2>
-        <p>📞 7618752588</p>
         <p>📧 meezan1mulla@gmail.com</p>
-
-        <p>
-            <a href="https://linkedin.com/in/meezan-mulla-3b2674263" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            |
-            <a href="https://github.com/meezan-cloud" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </p>
     </div>
 
 </div>
 
-<!-- PARTICLES CONFIG -->
+<!-- PARTICLES -->
 <script>
 particlesJS("particles-js", {
   particles: {
@@ -230,10 +199,7 @@ particlesJS("particles-js", {
     move: { speed: 1 },
     line_linked: {
       enable: true,
-      distance: 150,
-      color: "#7c3aed",
-      opacity: 0.4,
-      width: 1
+      color: "#7c3aed"
     }
   }
 });
@@ -244,8 +210,7 @@ particlesJS("particles-js", {
 const nameText = "Meezan Mulla";
 const taglineText = "AI/ML Engineer building intelligent, scalable, and real-world data-driven systems.";
 
-let i = 0;
-let j = 0;
+let i = 0, j = 0;
 
 function typeName() {
     if (i < nameText.length) {
@@ -258,23 +223,42 @@ function typeName() {
     }
 }
 
-function highlightWords(text) {
-    return text
-        .replace("AI/ML", '<span class="highlight">AI/ML</span>')
-        .replace("intelligent", '<span class="highlight">intelligent</span>')
-        .replace("scalable", '<span class="highlight">scalable</span>');
-}
-
 function typeTagline() {
     if (j < taglineText.length) {
-        let currentText = taglineText.substring(0, j + 1);
-        document.getElementById("tagline").innerHTML = highlightWords(currentText);
+        document.getElementById("tagline").innerHTML += taglineText.charAt(j);
         j++;
-        setTimeout(typeTagline, 35);
+        setTimeout(typeTagline, 30);
     }
 }
 
 typeName();
+</script>
+
+<!-- SCROLL REVEAL -->
+<script>
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
+
+<!-- CURSOR -->
+<script>
+const dot = document.querySelector(".cursor-dot");
+const glow = document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", e => {
+    dot.style.top = e.clientY + "px";
+    dot.style.left = e.clientX + "px";
+    glow.style.top = e.clientY - 10 + "px";
+    glow.style.left = e.clientX - 10 + "px";
+});
 </script>
 
 </body>
