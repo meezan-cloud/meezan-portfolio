@@ -39,7 +39,22 @@
 <div class="container">
 
     <h1>> whoami</h1>
-    <p>Meezan - AI/ML Engineer & Full Stack Developer</p>
+<p id="typing"></p>
+
+<script>
+    let text = "Meezan - AI/ML Engineer & Full Stack Developer";
+    let i = 0;
+
+    function typeEffect() {
+        if (i < text.length) {
+            document.getElementById("typing").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeEffect, 50);
+        }
+    }
+
+    typeEffect();
+</script>
 
     <h1>> skills</h1>
     <p>Python | Machine Learning | React | NLP | SQL</p>
