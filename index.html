@@ -3,27 +3,23 @@
 <head>
     <title>Meezan | AI Engineer</title>
 
-    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- PARTICLES JS -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
     <style>
         body {
-            background-color: #020617;
-            color: #e5e7eb;
-            font-family: 'Segoe UI', sans-serif;
             margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #e5e7eb;
+            overflow-x: hidden;
+            background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #020617);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
         }
 
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -41,15 +37,14 @@
             color: #a78bfa;
         }
 
-        p {
-            line-height: 1.7;
-        }
-
         .section {
             margin-bottom: 100px;
         }
 
-        /* BUTTON */
+        p {
+            line-height: 1.7;
+        }
+
         .btn {
             display: inline-block;
             padding: 12px 22px;
@@ -63,7 +58,6 @@
             color: white;
         }
 
-        /* PROJECT CARDS */
         .projects {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -82,7 +76,6 @@
             box-shadow: 0 10px 25px rgba(124,58,237,0.3);
         }
 
-        /* SKILLS */
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -93,7 +86,6 @@
             background: #0f172a;
             padding: 10px 15px;
             border-radius: 8px;
-            font-size: 14px;
         }
 
         a {
@@ -104,20 +96,37 @@
         a:hover {
             color: #7c3aed;
         }
+
+        /* TYPEWRITER */
+        .typing {
+            border-right: 2px solid #a78bfa;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
     </style>
 </head>
 
 <body>
 
-<!-- AI BACKGROUND -->
-<div id="particles-js"></div>
-
 <div class="container">
 
     <!-- HERO -->
     <div class="section">
-        <h1>Meezan Mulla</h1>
-        <p>AI/ML Engineer building intelligent and scalable systems using Machine Learning and Full Stack technologies.</p>
+        <h1 class="typing">Meezan Mulla</h1>
+        <p class="typing" style="animation-delay:3s;">
+            AI/ML Engineer building intelligent and scalable systems
+        </p>
         <a class="btn" href="Resume.pdf" target="_blank">Download Resume</a>
     </div>
 
@@ -193,24 +202,6 @@
     </div>
 
 </div>
-
-<!-- PARTICLES CONFIG -->
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 70 },
-    size: { value: 3 },
-    move: { speed: 1 },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#7c3aed",
-      opacity: 0.4,
-      width: 1
-    }
-  }
-});
-</script>
 
 </body>
 </html>
