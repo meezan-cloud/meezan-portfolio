@@ -3,6 +3,9 @@
 <head>
     <title>Meezan | AI Engineer</title>
 
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         body {
             background-color: #0d1117;
@@ -24,6 +27,10 @@
 
         h2 {
             color: #00ff9f;
+        }
+
+        p {
+            line-height: 1.6;
         }
 
         .section {
@@ -60,6 +67,25 @@
             background-color: #00ff9f;
             color: black;
         }
+
+        /* SKILL BARS */
+        .skill-bar {
+            width: 100%;
+            background: #30363d;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .skill {
+            height: 10px;
+            background: #00ff9f;
+            border-radius: 5px;
+        }
+
+        .python { width: 90%; }
+        .ml { width: 85%; }
+        .react { width: 75%; }
+        .sql { width: 80%; }
     </style>
 </head>
 
@@ -111,7 +137,18 @@
     <!-- SKILLS -->
     <div class="section">
         <h1>Skills</h1>
-        <p>Python | Machine Learning | NLP | React | SQL | JavaScript</p>
+
+        <p>Python</p>
+        <div class="skill-bar"><div class="skill python"></div></div>
+
+        <p>Machine Learning</p>
+        <div class="skill-bar"><div class="skill ml"></div></div>
+
+        <p>React</p>
+        <div class="skill-bar"><div class="skill react"></div></div>
+
+        <p>SQL</p>
+        <div class="skill-bar"><div class="skill sql"></div></div>
     </div>
 
     <!-- CONTACT -->
@@ -120,10 +157,14 @@
         <p>📞 7618752588</p>
         <p>📧 meezan1mulla@gmail.com</p>
         <p>
-    <a href="https://linkedin.com/in/meezan-mulla-3b2674263" target="_blank">LinkedIn</a>
-    <span> | </span>
-    <a href="https://github.com/meezan-cloud" target="_blank">GitHub</a>
-</p>
+            <a href="https://linkedin.com/in/meezan-mulla-3b2674263" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <span> | </span>
+            <a href="https://github.com/meezan-cloud" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </p>
     </div>
 
 </div>
