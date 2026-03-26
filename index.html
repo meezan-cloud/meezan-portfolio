@@ -115,9 +115,9 @@
 <div class="section">
     <h2>About Me</h2>
     <div class="card">
-        <p>I am a final-year AI/ML Engineering student with strong hands-on experience...</p>
-        <p>My work involves developing intelligent systems...</p>
-        <p>Along with academic and personal projects...</p>
+        <p>I am a final-year AI/ML Engineering student with strong hands-on experience in building machine learning models and full-stack applications.</p>
+        <p>I have worked across computer vision, NLP, and data analytics domains.</p>
+        <p>I focus on building real-world AI systems and scalable applications.</p>
     </div>
 </div>
 
@@ -125,19 +125,19 @@
 <div class="section">
     <h2>Projects</h2>
     <div class="projects">
+
         <div class="card">
             <h3>Smart Yoga AI</h3>
-            <p>Real-time pose detection system (~95% accuracy).</p>
-            <p><b>Tech:</b> Python, OpenCV, MediaPipe</p>
+            <p>Real-time pose detection (~95% accuracy)</p>
             <a href="https://github.com/meezan-cloud/Smart_Yoga" target="_blank">🔗 View Code</a>
         </div>
 
         <div class="card">
             <h3>Fake News Detection</h3>
-            <p>NLP-based fake news classification (~93%).</p>
-            <p><b>Tech:</b> Python, NLP, Scikit-learn</p>
+            <p>NLP-based classifier (~93% accuracy)</p>
             <a href="https://github.com/meezan-cloud/Fake-News-Detection" target="_blank">🔗 View Code</a>
         </div>
+
     </div>
 </div>
 
@@ -146,50 +146,31 @@
     <h2>Experience</h2>
 
     <div class="card">
-        <h3>Full Stack Developer Intern – NTS Nihon Global</h3>
-        <ul>
-            <li>Developed backend APIs and handled database integration</li>
-            <li>Worked on web and Android features</li>
-            <li>Performed debugging and optimization</li>
-        </ul>
+        <h3>NTS Nihon Global</h3>
+        <p>Worked on backend APIs, databases, and full-stack systems.</p>
     </div>
 
     <div class="card" style="margin-top:20px;">
-        <h3>Full Stack Development Intern – Cognifyz Technologies</h3>
-        <ul>
-            <li>Worked on frontend and backend tasks</li>
-            <li>Improved teamwork and communication skills</li>
-        </ul>
+        <h3>Cognifyz Technologies</h3>
+        <p>Worked on full stack development and team collaboration.</p>
     </div>
 
     <div class="card" style="margin-top:20px;">
-        <h3>Data Science Intern – Placemantra</h3>
-        <ul>
-            <li>Worked on data preprocessing and ML basics</li>
-            <li>Applied analytical thinking</li>
-        </ul>
+        <h3>Placemantra</h3>
+        <p>Worked on data science fundamentals and ML concepts.</p>
     </div>
 </div>
 
-<!-- CERTIFICATIONS (FIXED + CLEAN) -->
+<!-- CERTIFICATIONS -->
 <div class="section">
     <h2>Certifications</h2>
-
     <div class="card">
-        <ul style="list-style: none; padding-left: 0;">
-
-            <li><b>Introduction to NLP</b> – <span style="color:#c084fc;">Infosys</span></li>
-            <li><b>Data Science</b> – <span style="color:#c084fc;">Infosys</span></li>
-            <li><b>Artificial Intelligence</b> – <span style="color:#c084fc;">Infosys</span></li>
-            <li><b>Deep Learning</b> – <span style="color:#c084fc;">Infosys</span></li>
-            <li><b>Computer Vision</b> – <span style="color:#c084fc;">Infosys</span></li>
-            <li><b>RPA</b> – <span style="color:#c084fc;">Infosys</span></li>
-            <li><b>Machine Learning (Proctored)</b> – <span style="color:#c084fc;">NPTEL</span></li>
-            <li><b>GenAI Data Analytics</b> – <span style="color:#c084fc;">Tata</span></li>
-            <li><b>Data Analytics</b> – <span style="color:#c084fc;">Deloitte</span></li>
-            <li><b>Data Science</b> – <span style="color:#c084fc;">HP</span></li>
-            <li><b>DSA</b> – <span style="color:#c084fc;">Digital Adda</span></li>
-
+        <ul>
+            <li>NLP – Infosys</li>
+            <li>AI – Infosys</li>
+            <li>ML (Proctored) – NPTEL</li>
+            <li>GenAI – Tata</li>
+            <li>Analytics – Deloitte</li>
         </ul>
     </div>
 </div>
@@ -199,16 +180,38 @@
     <h2>Contact</h2>
     <p>📞 +91 7618752588</p>
     <p>📧 meezan1mulla@gmail.com</p>
-
-    <p>
-        <a href="https://linkedin.com/in/meezan-mulla-3b2674263">LinkedIn</a> |
-        <a href="https://github.com/meezan-cloud">GitHub</a>
-    </p>
-
-    <a class="btn" href="Resume.pdf">Download Resume</a>
 </div>
 
 </div>
+
+<!-- PARTICLES -->
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60 },
+    size: { value: 3 },
+    move: { speed: 1 }
+  }
+});
+</script>
+
+<!-- TYPE -->
+<script>
+document.getElementById("name").innerHTML = "Meezan Mulla";
+document.getElementById("tagline").innerHTML = "AI/ML Engineer building intelligent systems.";
+</script>
+
+<!-- SCROLL -->
+<script>
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
