@@ -3,22 +3,27 @@
 <head>
     <title>Meezan | AI Engineer</title>
 
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
             color: #e5e7eb;
-            background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #020617);
-            background-size: 400% 400%;
-            animation: gradientBG 12s ease infinite;
+            background-color: #020617;
         }
 
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
         }
 
         .container {
@@ -99,6 +104,9 @@
 </head>
 
 <body>
+
+<!-- AI BACKGROUND -->
+<div id="particles-js"></div>
 
 <div class="container">
 
@@ -182,7 +190,25 @@
 
 </div>
 
-<!-- TYPEWRITER SCRIPT -->
+<!-- PARTICLES CONFIG -->
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 70 },
+    size: { value: 3 },
+    move: { speed: 1 },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#7c3aed",
+      opacity: 0.4,
+      width: 1
+    }
+  }
+});
+</script>
+
+<!-- CLEAN TYPEWRITER -->
 <script>
 const nameText = "Meezan Mulla";
 const taglineText = "AI/ML Engineer building intelligent and scalable systems";
