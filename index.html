@@ -12,36 +12,13 @@
             font-family: 'Segoe UI', sans-serif;
             color: #e5e7eb;
             background-color: #020617;
-            cursor: none;
         }
 
-        /* PARTICLES */
         #particles-js {
             position: fixed;
             width: 100%;
             height: 100%;
             z-index: -1;
-        }
-
-        /* CUSTOM CURSOR */
-        .cursor-dot {
-            position: fixed;
-            width: 8px;
-            height: 8px;
-            background: #a78bfa;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 999;
-        }
-
-        .cursor-glow {
-            position: fixed;
-            width: 30px;
-            height: 30px;
-            background: rgba(167,139,250,0.2);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 998;
         }
 
         .container {
@@ -50,14 +27,8 @@
             padding: 60px 0;
         }
 
-        h1 {
-            font-size: 48px;
-            color: white;
-        }
-
-        h2 {
-            color: #a78bfa;
-        }
+        h1 { font-size: 48px; color: white; }
+        h2 { color: #a78bfa; }
 
         .section {
             margin-bottom: 100px;
@@ -71,7 +42,6 @@
             transform: translateY(0);
         }
 
-        /* GLASS CARDS */
         .card {
             background: rgba(15,23,42,0.6);
             backdrop-filter: blur(10px);
@@ -109,17 +79,12 @@
             border: 1px solid #7c3aed;
             border-radius: 8px;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
-        .btn:hover {
-            background: #7c3aed;
-        }
+        .btn:hover { background: #7c3aed; }
 
-        a {
-            color: #a78bfa;
-            text-decoration: none;
-        }
+        a { color: #a78bfa; text-decoration: none; }
 
         .cursor {
             display: inline-block;
@@ -128,13 +93,9 @@
             animation: blink 1s infinite;
         }
 
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
+        @keyframes blink { 50% { opacity: 0; } }
 
-        .highlight {
-            color: #c084fc;
-        }
+        .highlight { color: #c084fc; }
     </style>
 </head>
 
@@ -142,50 +103,76 @@
 
 <div id="particles-js"></div>
 
-<div class="cursor-dot"></div>
-<div class="cursor-glow"></div>
-
 <div class="container">
 
+    <!-- HERO -->
     <div class="section">
         <h1 id="name"></h1>
         <p id="tagline"></p>
-        <a class="btn" href="Resume.pdf" target="_blank">Download Resume</a>
     </div>
 
+    <!-- ABOUT -->
     <div class="section">
-        <h2>About</h2>
-        <p>AI/ML Engineering student building real-world intelligent systems using machine learning and full-stack technologies.</p>
+        <h2>About Me</h2>
+        <p>
+        I am a final-year AI/ML Engineering student with a strong foundation in machine learning, 
+        data analysis, and full-stack development. I specialize in building intelligent systems 
+        that solve real-world problems using technologies like Python, NLP, and Computer Vision.
+        </p>
+
+        <p>
+        I have developed projects such as a Smart Yoga Pose Detection system achieving 95% accuracy 
+        and an NLP-based Fake News Detection model with over 93% accuracy. My experience includes 
+        working with REST APIs, building scalable applications, and performing data-driven analysis.
+        </p>
+
+        <p>
+        I am passionate about designing efficient, scalable, and impactful AI solutions, and I am 
+        constantly exploring new technologies to enhance my problem-solving capabilities.
+        </p>
     </div>
 
+    <!-- PROJECTS -->
     <div class="section">
         <h2>Projects</h2>
         <div class="projects">
             <div class="card">
                 <h3>Smart Yoga AI</h3>
-                <p>95% accurate computer vision pose detection system.</p>
+                <p>95% accurate computer vision-based pose detection system.</p>
             </div>
             <div class="card">
                 <h3>Fake News Detection</h3>
-                <p>93% accurate NLP classification model.</p>
+                <p>93% accurate NLP-based classification model.</p>
             </div>
         </div>
     </div>
 
+    <!-- SKILLS -->
     <div class="section">
         <h2>Skills</h2>
         <div class="skills">
             <div class="skill">Python</div>
-            <div class="skill">ML</div>
+            <div class="skill">Machine Learning</div>
             <div class="skill">NLP</div>
             <div class="skill">React</div>
             <div class="skill">SQL</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">MongoDB</div>
         </div>
     </div>
 
+    <!-- CONTACT + RESUME -->
     <div class="section">
         <h2>Contact</h2>
+        <p>📞 7618752588</p>
         <p>📧 meezan1mulla@gmail.com</p>
+
+        <p>
+            <a href="https://linkedin.com/in/meezan-mulla-3b2674263" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/meezan-cloud" target="_blank">GitHub</a>
+        </p>
+
+        <a class="btn" href="Resume.pdf" target="_blank">Download Resume</a>
     </div>
 
 </div>
@@ -240,24 +227,10 @@ const sections = document.querySelectorAll(".section");
 
 window.addEventListener("scroll", () => {
     sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
+        if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
             sec.classList.add("show");
         }
     });
-});
-</script>
-
-<!-- CURSOR -->
-<script>
-const dot = document.querySelector(".cursor-dot");
-const glow = document.querySelector(".cursor-glow");
-
-document.addEventListener("mousemove", e => {
-    dot.style.top = e.clientY + "px";
-    dot.style.left = e.clientX + "px";
-    glow.style.top = e.clientY - 10 + "px";
-    glow.style.left = e.clientX - 10 + "px";
 });
 </script>
 
