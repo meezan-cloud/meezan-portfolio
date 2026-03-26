@@ -3,108 +3,99 @@
 <head>
     <title>Meezan | AI Engineer</title>
 
-    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         body {
-            background-color: #0d1117;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
         }
 
         .container {
-            width: 80%;
+            width: 70%;
             margin: auto;
-            padding: 40px 0;
+            padding: 60px 0;
         }
 
         h1 {
-            font-size: 36px;
-        }
-
-        h2 {
-            color: #00ff9f;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        .section {
-            margin-bottom: 80px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeIn 1s forwards;
-        }
-
-        .section:nth-child(1) { animation-delay: 0.2s; }
-        .section:nth-child(2) { animation-delay: 0.4s; }
-        .section:nth-child(3) { animation-delay: 0.6s; }
-        .section:nth-child(4) { animation-delay: 0.8s; }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .box {
-            background: #161b22;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .box:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 0 20px #00ff9f;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 10px;
+            font-size: 48px;
+            color: white;
             margin-bottom: 10px;
         }
 
-        a {
-            color: #00ff9f;
-            text-decoration: none;
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .section {
+            margin-bottom: 100px;
+        }
+
+        /* HERO */
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
         }
 
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            border: 1px solid #00ff9f;
-            border-radius: 5px;
-            margin-top: 10px;
+            padding: 12px 22px;
+            border: 1px solid #38bdf8;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 500;
         }
 
         .btn:hover {
-            background-color: #00ff9f;
+            background-color: #38bdf8;
             color: black;
         }
 
-        .skill-bar {
-            width: 100%;
-            background: #30363d;
-            border-radius: 5px;
-            margin-bottom: 15px;
+        /* PROJECT CARDS */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(56,189,248,0.2);
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .skill {
-            height: 10px;
-            background: #00ff9f;
-            border-radius: 5px;
+            background: #1e293b;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
         }
 
-        .python { width: 90%; }
-        .ml { width: 85%; }
-        .react { width: 75%; }
-        .sql { width: 80%; }
+        /* CONTACT */
+        .contact a {
+            margin-right: 10px;
+        }
     </style>
 </head>
 
@@ -113,69 +104,77 @@
 <div class="container">
 
     <!-- HERO -->
-    <div class="section">
+    <div class="section hero">
         <h1>Meezan Mulla</h1>
-        <p>AI/ML Engineer | Full Stack Developer</p>
+        <p>AI/ML Engineer building intelligent and scalable systems using Machine Learning and Full Stack technologies.</p>
         <a class="btn" href="Resume.pdf" target="_blank">Download Resume</a>
     </div>
 
     <!-- ABOUT -->
     <div class="section">
-        <h1>About Me</h1>
+        <h2>About</h2>
         <p>
-        I am an AI/ML Engineering student specializing in building intelligent systems 
-        using Machine Learning, Computer Vision, and Web Technologies. 
-        I focus on developing scalable and real-world data-driven solutions.
+        Final-year AI/ML Engineering student with experience in building real-world machine learning models 
+        and full-stack applications. Strong focus on problem-solving, data-driven systems, and scalable solutions.
         </p>
     </div>
 
     <!-- PROJECTS -->
     <div class="section">
-        <h1>Projects</h1>
+        <h2>Projects</h2>
 
-        <div class="box">
-            <img src="https://images.unsplash.com/photo-1581093458791-9d09d2f9b1f1" alt="Yoga AI">
-            <h2>Smart Yoga AI – Pose Detection System</h2>
-            <p>Computer vision-based system achieving 95% accuracy in real-time pose detection.</p>
-            <a href="https://github.com/meezan-cloud" target="_blank">View Project →</a>
+        <div class="projects">
+
+            <div class="card">
+                <h3>Smart Yoga AI</h3>
+                <p>Computer vision-based system for real-time yoga pose detection with 95% accuracy.</p>
+                <a href="https://github.com/meezan-cloud" target="_blank">View Project →</a>
+            </div>
+
+            <div class="card">
+                <h3>Fake News Detection</h3>
+                <p>NLP-based machine learning model achieving 93% accuracy in classification.</p>
+                <a href="https://github.com/meezan-cloud" target="_blank">View Project →</a>
+            </div>
+
         </div>
-
-        <div class="box">
-            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296" alt="Fake News">
-            <h2>Fake News Detection – NLP Classifier</h2>
-            <p>NLP-based model achieving 93% accuracy in news classification.</p>
-            <a href="https://github.com/meezan-cloud" target="_blank">View Project →</a>
-        </div>
-
     </div>
 
     <!-- SKILLS -->
     <div class="section">
-        <h1>Skills</h1>
+        <h2>Skills</h2>
 
-        <p>Python</p>
-        <div class="skill-bar"><div class="skill python"></div></div>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Java</div>
+            <div class="skill">C</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">NLP</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">NumPy</div>
+            <div class="skill">Scikit-learn</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">MongoDB</div>
+            <div class="skill">Git</div>
+            <div class="skill">Power BI</div>
+        </div>
 
-        <p>Machine Learning</p>
-        <div class="skill-bar"><div class="skill ml"></div></div>
-
-        <p>React</p>
-        <div class="skill-bar"><div class="skill react"></div></div>
-
-        <p>SQL</p>
-        <div class="skill-bar"><div class="skill sql"></div></div>
     </div>
 
     <!-- CONTACT -->
-    <div class="section">
-        <h1>Contact</h1>
+    <div class="section contact">
+        <h2>Contact</h2>
         <p>📞 7618752588</p>
         <p>📧 meezan1mulla@gmail.com</p>
+
         <p>
             <a href="https://linkedin.com/in/meezan-mulla-3b2674263" target="_blank">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <span> | </span>
+            |
             <a href="https://github.com/meezan-cloud" target="_blank">
                 <i class="fab fa-github"></i> GitHub
             </a>
